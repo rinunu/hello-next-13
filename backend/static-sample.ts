@@ -1,9 +1,7 @@
 import "server-only";
 
-import { sleep } from "../util/sleep";
-
-import Pokedex, { NamedAPIResource } from "pokedex-promise-v2";
-import PokeAPI from "pokedex-promise-v2";
+import Pokedex from "pokedex-promise-v2";
+import PokeAPI, { NamedAPIResource } from "pokedex-promise-v2";
 
 const P = new Pokedex();
 

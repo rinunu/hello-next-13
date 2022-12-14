@@ -1,7 +1,7 @@
 import { Frame } from "../frame";
 import { ServerComponentStatus } from "../component-status/server-component-status";
 import { getDynamicSampleList } from "../../../backend/dynamic-sample";
-import { RefreshButtonArea } from "./refresh-button-area";
+import { GetButtonBox } from "./get-button-box";
 import { Suspense } from "react";
 import { Loading } from "../loading";
 import { SampleItem } from "../sample-item";
@@ -42,7 +42,7 @@ export async function ServerDynamicData() {
           flexDirection: "row",
         }}
       >
-        <RefreshButtonArea />
+        <GetButtonBox />
 
         <Frame>
           <ClientComponentStatus />

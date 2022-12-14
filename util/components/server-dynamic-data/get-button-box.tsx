@@ -6,7 +6,7 @@ import { Button } from "../button";
 import { Frame } from "../frame";
 import { ClientComponentStatus } from "../component-status/client-component-status";
 
-export function RefreshButtonArea() {
+export function GetButtonBox() {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
@@ -19,9 +19,11 @@ export function RefreshButtonArea() {
   return (
     <Frame>
       <ClientComponentStatus />
-      <div style={{
-        marginTop: "12px"
-      }}>
+      <div
+        style={{
+          marginTop: "12px",
+        }}
+      >
         <Button isLoading={isPending} onClick={refresh}>
           ゲットだよ！
         </Button>

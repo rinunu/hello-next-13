@@ -1,5 +1,3 @@
-import { sleep } from "../util/sleep";
-
 import Pokedex from "pokedex-promise-v2";
 import { headers } from "next/headers";
 
