@@ -4,7 +4,7 @@ import { BlurImage } from "./blur-image";
 
 interface Props {
   id: string;
-  size: "md" | "lg";
+  size?: "md" | "lg";
 }
 
 export async function StaticItem({ id, size = "md" }: Props) {
