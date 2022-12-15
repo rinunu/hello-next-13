@@ -3,7 +3,7 @@ import {
   StaticSample,
   StaticSampleListItem,
 } from "../../backend/static-sample";
-import { Frame } from "./frame";
+import { Frame } from "./common/frame";
 import { ServerComponentStatus } from "./component-status/server-component-status";
 import Image from "next/image";
 import { BlurImage } from "./blur-image";
@@ -12,7 +12,7 @@ interface Props {
   id: string;
 }
 
-export async function SampleDetail({ id }: Props) {
+export async function StaticDetail({ id }: Props) {
   const p = await getStaticSampleDetail(id);
   return (
     <Frame>

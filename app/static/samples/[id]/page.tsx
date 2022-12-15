@@ -1,11 +1,10 @@
 import { Suspense } from "react";
-import { Loading } from "../../../../util/components/loading";
+import { Loading } from "../../../../util/components/common/loading";
 import { ServerComponentStatus } from "../../../../util/components/component-status/server-component-status";
-import { SampleDetail } from "../../../../util/components/sample-detail";
-import { Frame } from "../../../../util/components/frame";
-import { Menu } from "../../../../util/components/menu";
+import { StaticDetail } from "../../../../util/components/static-detail";
+import { Frame } from "../../../../util/components/common/frame";
+import { Menu } from "../../../../util/components/menu/menu";
 import { getStaticSampleList } from "../../../../backend/static-sample";
-import { DynamicData } from "../../../../util/components/dynamic-data";
 
 interface Props {
   params: { id: string };
@@ -16,11 +15,10 @@ export default function Page2({ params }: Props) {
     <Frame>
       <ServerComponentStatus />
       <Menu />
-      <DynamicData />
 
       <Suspense fallback={<Loading />}>
         {/* @ts-expect-error Server Component */}
-        <SampleDetail id={params.id} />
+        <StaticDetail id={params.id} />
       </Suspense>
     </Frame>
   );

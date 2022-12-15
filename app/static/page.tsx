@@ -1,10 +1,9 @@
-import { SampleList } from "../../util/components/sample-list/sample-list";
+import { StaticList } from "../../util/components/static-list/static-list";
 import { Suspense } from "react";
-import { Loading } from "../../util/components/loading";
-import { DynamicData } from "../../util/components/dynamic-data";
-import { Frame } from "../../util/components/frame";
+import { Loading } from "../../util/components/common/loading";
+import { Frame } from "../../util/components/common/frame";
 import { ServerComponentStatus } from "../../util/components/component-status/server-component-status";
-import { Menu } from "../../util/components/menu";
+import { Menu } from "../../util/components/menu/menu";
 
 export default function Home() {
   return (
@@ -12,11 +11,9 @@ export default function Home() {
       <ServerComponentStatus />
       <Menu />
 
-      <DynamicData />
-
       <Suspense fallback={<Loading />}>
         {/* @ts-expect-error Server Component */}
-        <SampleList />
+        <StaticList />
       </Suspense>
     </Frame>
   );

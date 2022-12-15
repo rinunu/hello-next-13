@@ -1,11 +1,11 @@
 "use client";
 import { GetButtonBox } from "./get-button-box";
-import { Frame } from "../frame";
+import { Frame } from "../common/frame";
 import { ClientComponentStatus } from "../component-status/client-component-status";
 import { BlurSlider } from "./blur-slider";
-import { HStack } from "@chakra-ui/react";
+import { HStack } from "../common/h-stack";
 
-export function ButtonsBox() {
+export function ControlBox() {
   return (
     <HStack>
       <GetButtonBox />

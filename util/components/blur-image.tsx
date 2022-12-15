@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { blurValueState } from "../blur-value";
 import { useRecoilValue } from "recoil";
-import { Frame } from "./frame";
+import { Frame } from "./common/frame";
 import { ClientComponentStatus } from "./component-status/client-component-status";
 
 interface Props {

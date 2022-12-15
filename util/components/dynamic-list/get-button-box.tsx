@@ -2,8 +2,8 @@
 import { useRouter } from "next/navigation";
 
 import { useCallback, useTransition } from "react";
-import { Button } from "../button";
-import { Frame } from "../frame";
+import { Button } from "../common/button";
+import { Frame } from "../common/frame";
 import { ClientComponentStatus } from "../component-status/client-component-status";
 
 export function GetButtonBox() {
@@ -19,11 +19,7 @@ export function GetButtonBox() {
   return (
     <Frame>
       <ClientComponentStatus />
-      <div
-        style={{
-          marginTop: "12px",
-        }}
-      >
+      <div style={{ marginTop: "12px" }}>
         <Button isLoading={isPending} onClick={refresh}>
           ゲットだよ！
         </Button>

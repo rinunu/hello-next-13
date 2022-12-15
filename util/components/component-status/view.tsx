@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Clock } from "../clock";
+import { Wrap } from "../common/wrap";
 
 interface Props {
   isServerComponent: boolean;
@@ -10,21 +11,10 @@ interface Props {
   isSsr: boolean;
 }
 
-export function View({
-  isServerComponent,
-  isDynamic,
-  isSsr,
-  renderTime,
-}: Props) {
+export function View({ isServerComponent, renderTime }: Props) {
   useState();
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
-      }}
-    >
+    <Wrap>
       <div
         style={{
           marginRight: "4px",
@@ -34,32 +24,18 @@ export function View({
         {isServerComponent ? "Server " : "Client"}
       </div>
 
-      {/*<div*/}
-      {/*  style={{*/}
-      {/*    marginRight: "4px",*/}
-      {/*    backgroundColor: isDynamic ? "#faa" : "#afa",*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  {isDynamic ? "Dynamic " : "Static "}*/}
-      {/*</div>*/}
-
-      {/*<div*/}
-      {/*  style={{*/}
-      {/*    marginRight: "4px",*/}
-      {/*    backgroundColor: isSsr ? "#afa" : "#faa",*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  {isSsr ? "Server Rendering" : "Client Rendering"}*/}
-      {/*</div>*/}
-
       <div
         style={{
           marginRight: "4px",
           backgroundColor: "#eee",
+          minWidth: "80px",
+          paddingLeft: "4px",
+          paddingRight: "4px",
+          textAlign: "right",
         }}
       >
         <Clock instant={renderTime} />
       </div>
-    </div>
+    </Wrap>
   );
 }

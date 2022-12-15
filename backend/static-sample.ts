@@ -10,7 +10,7 @@ export type StaticSample = PokeAPI.Pokemon;
 
 export async function getStaticSampleList(): Promise<StaticSampleListItem[]> {
   const list = await P.getPokemonsList();
-  return list.results.slice(0, 10);
+  return list.results.slice(0, 20);
 }
 
 export async function getStaticSampleDetail(id: string): Promise<StaticSample> {

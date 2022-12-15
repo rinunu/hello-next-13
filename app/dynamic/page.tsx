@@ -1,7 +1,7 @@
-import { Frame } from "../../util/components/frame";
+import { Frame } from "../../util/components/common/frame";
 import { ServerComponentStatus } from "../../util/components/component-status/server-component-status";
-import { Menu } from "../../util/components/menu";
-import { ServerDynamicData } from "../../util/components/server-dynamic-data/server-dynamic-data";
+import { Menu } from "../../util/components/menu/menu";
+import { DynamicList } from "../../util/components/dynamic-list/dynamic-list";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Menu />
 
       {/* @ts-expect-error Server Component */}
-      <ServerDynamicData />
+      <DynamicList />
     </Frame>
   );
 }

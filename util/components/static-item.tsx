@@ -7,7 +7,7 @@ interface Props {
   size: "md" | "lg";
 }
 
-export async function SampleItem({ id, size = "md" }: Props) {
+export async function StaticItem({ id, size = "md" }: Props) {
   const p = await getStaticSampleDetail(id);
   const wh = size === "md" ? 96 : 200;
   const blur = size === "md" ? undefined : 4;
@@ -18,7 +18,7 @@ export async function SampleItem({ id, size = "md" }: Props) {
           fontSize: "20px",
           fontWeight: "bold",
           whiteSpace: "nowrap",
-            overflow: "hidden",
+          overflow: "hidden",
         }}
       >
         {p.name}

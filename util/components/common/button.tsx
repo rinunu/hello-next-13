@@ -18,10 +18,13 @@ export function Button({ onClick, isLoading, children }: Props) {
         paddingRight: "12px",
         boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
         minWidth: "140px",
+        backgroundColor: "#fcc",
+        fontWeight: "bold",
+        fontSize: "18px",
       }}
       onClick={onClick}
     >
-      {isLoading ? <Spinner size="xs" /> : children}
+      {isLoading ? <Spinner size="sm" /> : children}
     </button>
   );
 }
